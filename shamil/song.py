@@ -10,22 +10,22 @@ from config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-BUTTON1="📜 Source Code 📜"
-B2="telegram.dog/shamilhabeeb"
-OWNER="Owner"
-GITCLONE="github.com/shamilhabeebnelli/song-bot"
 ABS="Developer"
 APPER="shamilhabeeb"
+OWNER="Owner"
+GITCLONE="github.com/shamilhabeebnelli/song-bot"
+B2="telegram.dog/shamilnelli"
+BUTTON1="📜 Source Code 📜"
 
 @Client.on_message(filters.command('start') & filters.private)
 async def start(client, message):
-    await message.reply_photo(photo=Config.START_IMG, caption=Config.START_MSG.format(message.from_user.mention),
+    await message.reply_photo(photo="https://telegra.ph/file/2a35fca576aa49de77c98.jpg", caption="Hi {},\nIam A Simple Youtube to Mp3 Downloader Bot,\n\nSend me Any Songs name or YouTube link, I can help you with uploading that to TG".format(message.from_user.mention),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(BUTTON1, url=GITCLONE)
                  ],[
-                    InlineKeyboardButton(OWNER, url=f"https://telegram.dog/{Config.OWNER}"),
+                    InlineKeyboardButton(OWNER, url=f"https://telegram.dog/elonmusk_010"),
                     InlineKeyboardButton(ABS, url=B2)
             ]
           ]
